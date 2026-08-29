@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17151a" />
+  <meta name="description" content="wjc bar · 一间由你调制的暖心小酒馆" />
+  <title>wjc bar · 暖心小酒馆</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div>
+          <div class="eyebrow">WARM NIGHT / 01</div>
+          <h1>wjc bar</h1>
+        </div>
+      </div>
+      <p class="brand-note">不急着给答案，<br />先给今晚留一盏灯。</p>
+      <nav class="main-nav" aria-label="主导航">
+        <button class="nav-item active" data-view="home"><span>⌂</span>酒馆首页</button>
+        <button class="nav-item" data-view="guests"><span>♧</span>顾客与故事 <i id="guest-badge">3</i></button>
+        <button class="nav-item" data-view="lab"><span>◒</span>调酒实验室</button>
+        <button class="nav-item" data-view="menu"><span>✦</span>我的菜单</button>
+        <button class="nav-item" data-view="journal"><span>▤</span>酒馆日志 <i id="log-badge">0</i></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="streak-card">
+          <div class="tiny-label">今夜营业</div>
+          <strong id="served-count">0</strong><span> 位客人被好好接住</span>
+          <div class="streak-line"><span id="streak-fill"></span></div>
+        </div>
+        <button class="reset-button" id="reset-progress">↺ 重置本地进度</button>
+        <div class="version">v1.0 · made for slow evenings</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-dot"></span> wjc bar</div>
+        <div class="topbar-meta"><span class="live-dot"></span><span id="open-status">正在营业</span><span class="meta-divider"></span><span id="top-date">2026 / 08 / 29</span></div>
+        <button class="icon-button" id="sound-toggle" aria-label="切换环境音"><span>◖</span></button>
+      </header>
+
+      <section id="view-home" class="view active-view">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow warm">THE ROOM IS YOURS TONIGHT</div>
+            <h2>欢迎回来，<em>老板。</em></h2>
+            <p>窗外刚下过一场小雨。第一盏灯已经亮了，<br />有人在门口犹豫要不要进来。</p>
+            <button class="primary-button" data-view="guests">看看今晚谁来了 <span>→</span></button>
+          </div>
+          <div class="room-illustration" aria-label="雨夜里的暖心小酒馆插画">
+            <div class="window-glow"></div><div class="rain rain-a"></div><div class="rain rain-b"></div><div class="rain rain-c"></div>
+            <div class="room-frame"><div class="room-wall"></div><div class="shelf shelf-one"><span></span><span></span><span></span><span></span></div><div class="shelf shelf-two"><span></span><span></span><span></span></div><div class="lamp"><i></i><b></b></div><div class="plant"><i></i><i></i><i></i><b></b></div><div class="bar-counter"><span class="counter-light"></span></div><div class="stool stool-a"></div><div class="stool stool-b"></div><div class="record-player">●<small>♫</small></div></div>
+            <div class="room-caption"><span>WINDOW SEAT 02</span><span>雨 · 18℃</span></div>
+          </div>
+        </div>
+
+        <div class="section-heading home-heading"><div><div class="eyebrow">A SMALL UPDATE</div><h3>今晚的小事</h3></div><span class="muted">周六 · 雨停之后</span></div>
+        <div class="home-cards">
+          <article class="info-card weather-card"><div class="card-icon">☾</div><div><div class="tiny-label">窗外天气</div><h4>雨后的蓝</h4><p>空气里有一点潮湿，适合让音乐慢半拍。</p></div><span class="card-arrow">↗</span></article>
+          <article class="info-card visitor-card"><div class="avatar mini-avatar avatar-lin">林</div><div><div class="tiny-label">熟客消息</div><h4>林弦留了张纸条</h4><p>“今晚想坐窗边，先不用问我近况。”</p></div><span class="card-arrow">↗</span></article>
+          <article class="info-card record-card"><div class="card-icon vinyl">◉</div><div><div class="tiny-label">正在播放</div><h4>Side B · 23:17</h4><p>一张没有封面的旧唱片，音量很轻。</p></div><span class="card-arrow">↗</span></article>
+        </div>
+        <div class="quote-strip"><span class="quote-mark">“</span><p id="daily-quote">有些夜晚，不需要被解决，只需要被认真度过。</p><span class="quote-author">— 酒馆手记 001</span></div>
+        <div class="atmosphere-panel"><div><div class="eyebrow">SET THE ROOM'S TONE</div><h3>今晚把灯调成哪一种心情？</h3><p>灯光、窗景、唱片和桌上的小东西，会悄悄改变客人坐下来的方式。</p></div><div class="atmosphere-choices" id="atmosphere-choices"></div></div>
+      </section>
+
+      <section id="view-guests" class="view">
+        <div class="page-intro"><div><div class="eyebrow warm">THE PEOPLE WHO RETURN</div><h2>今天，谁坐进了你的故事？</h2><p>他们不会点一杯标准答案。留意他们没有说完的那句话。</p></div><div class="chapter-chip"><span>第三章</span><strong>雨停后的门铃</strong></div></div>
+        <div class="guest-layout"><div class="guest-list" id="guest-list"></div><div class="guest-detail" id="guest-detail"></div></div>
+      </section>
+
+      <section id="view-lab" class="view">
+        <div class="page-intro lab-intro"><div><div class="eyebrow warm">THE COUNTER IS YOUR CANVAS</div><h2>调一杯今晚的心情</h2><p>没有标准配方。先尝试，再决定它应该叫什么。</p></div><label class="mode-switch"><input type="checkbox" id="free-mode-toggle" /><span class="switch-track"></span><span><b>自由模式</b><small>只和风味相处</small></span></label></div>
+        <div class="lab-layout">
+          <div class="lab-controls">
+            <div class="lab-section"><div class="section-label"><span>01</span><h3>选择材料</h3><small>点击加入 / 再次点击移除</small></div><div class="ingredient-grid" id="ingredient-grid"></div></div>
+            <div class="lab-section"><div class="section-label"><span>02</span><h3>决定做法</h3></div><div class="technique-row" id="technique-row"></div></div>
+            <div class="lab-section"><div class="section-label"><span>03</span><h3>调校风味</h3><small>这是你说话的语气</small></div><div class="sliders" id="flavor-sliders"></div></div>
+            <div class="lab-section duo-section"><div><div class="section-label"><span>04</span><h3>选一只杯子</h3></div><div class="choice-row" id="glass-row"></div></div><div><div class="section-label"><span>05</span><h3>最后一笔</h3></div><div class="choice-row" id="garnish-row"></div></div></div>
+          </div>
+          <aside class="drink-preview"><div class="preview-kicker"><span id="preview-context">自由实验</span><span id="recipe-number">#001</span></div><div class="glass-stage"><div class="ambient-halo"></div><div class="drink-glass" id="drink-glass"><div class="liquid" id="liquid"><span class="liquid-shine"></span></div><div class="ice-cube ice-one"></div><div class="ice-cube ice-two"></div><div class="garnish-float" id="garnish-float">✦</div></div></div><div class="drink-summary"><div class="drink-tags" id="drink-tags"></div><h3 id="drink-title">还没有名字的夜晚</h3><p id="drink-description">从左边挑一些材料。每一次犹豫，都会留下不同的味道。</p><div class="flavor-bars" id="flavor-bars"></div></div><div class="preview-actions"><button class="secondary-button" id="save-recipe">♡ 保存配方</button><button class="primary-button" id="serve-drink">端上桌 <span>→</span></button></div><div class="guest-prompt" id="guest-prompt"><span>☞</span><p>先从顾客那里听到一点什么，再回到这里也不迟。</p><button data-view="guests">去看看</button></div></aside>
+        </div>
+      </section>
+
+      <section id="view-menu" class="view"><div class="page-intro"><div><div class="eyebrow warm">THE MENU YOU ARE BECOMING</div><h2>你的招牌，不必讨好所有人</h2><p>保存过的作品会留在这里。菜单会随着你改变。</p></div><button class="secondary-button" id="new-recipe">＋ 新开一杯</button></div><div class="menu-tabs"><button class="active" data-menu-filter="all">全部作品</button><button data-menu-filter="signature">招牌菜单</button><button data-menu-filter="archive">创作记录</button></div><div class="menu-grid" id="menu-grid"></div></section>
+
+      <section id="view-journal" class="view"><div class="page-intro"><div><div class="eyebrow warm">THE NIGHT LEAVES TRACES</div><h2>酒馆日志</h2><p>写下那些没有被菜单记录的东西。</p></div><div class="journal-count"><strong id="journal-total">0</strong><span>条片段</span></div></div><div class="journal-layout"><div class="journal-list" id="journal-list"></div><aside class="journal-aside"><div class="aside-note"><span class="quote-mark">“</span><p>经营一家酒馆，可能只是每天给不同的人，留出一块不必解释的地方。</p><div class="tiny-label">老板的备忘</div></div><div class="milestone-card"><div class="tiny-label">你的酒馆风格</div><h3 id="style-title">还在长成</h3><p id="style-description">每一杯作品、每一次回应，都会让它更像你。</p><div class="style-dots"><i></i><i></i><i></i><i></i><i></i></div></div></aside></div></section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="service-modal"><div class="service-modal-card"><button class="modal-close" id="close-modal">×</button><div class="eyebrow warm">A QUIET MOMENT AT THE BAR</div><div id="modal-content"></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>

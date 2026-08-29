@@ -33,14 +33,14 @@
           <div class="streak-line"><span id="streak-fill"></span></div>
         </div>
         <button class="reset-button" id="reset-progress">↺ 重置本地进度</button>
-        <div class="version">v1.0 · made for slow evenings</div>
+        <div class="version">v1.1 · made for slow evenings</div>
       </div>
     </aside>
 
     <main class="main-content">
       <header class="topbar">
         <div class="mobile-brand"><span class="brand-dot"></span> wjc bar</div>
-        <div class="topbar-meta"><span class="live-dot"></span><span id="open-status">正在营业</span><span class="meta-divider"></span><span id="top-date">2026 / 08 / 29</span></div>
+        <div class="topbar-meta"><span class="live-dot"></span><span id="open-status">正在营业</span><span class="meta-divider"></span><span id="top-date">2026 / 08 / 29</span><span class="save-indicator">● 自动存档</span></div>
         <button class="icon-button" id="sound-toggle" aria-label="切换环境音"><span>◖</span></button>
       </header>
 
@@ -83,7 +83,7 @@
             <div class="lab-section"><div class="section-label"><span>03</span><h3>调校风味</h3><small>这是你说话的语气</small></div><div class="sliders" id="flavor-sliders"></div></div>
             <div class="lab-section duo-section"><div><div class="section-label"><span>04</span><h3>选一只杯子</h3></div><div class="choice-row" id="glass-row"></div></div><div><div class="section-label"><span>05</span><h3>最后一笔</h3></div><div class="choice-row" id="garnish-row"></div></div></div>
           </div>
-          <aside class="drink-preview"><div class="preview-kicker"><span id="preview-context">自由实验</span><span id="recipe-number">#001</span></div><div class="glass-stage"><div class="ambient-halo"></div><div class="drink-glass" id="drink-glass"><div class="liquid" id="liquid"><span class="liquid-shine"></span></div><div class="ice-cube ice-one"></div><div class="ice-cube ice-two"></div><div class="garnish-float" id="garnish-float">✦</div></div></div><div class="drink-summary"><div class="drink-tags" id="drink-tags"></div><h3 id="drink-title">还没有名字的夜晚</h3><p id="drink-description">从左边挑一些材料。每一次犹豫，都会留下不同的味道。</p><div class="flavor-bars" id="flavor-bars"></div></div><div class="preview-actions"><button class="secondary-button" id="save-recipe">♡ 保存配方</button><button class="primary-button" id="serve-drink">端上桌 <span>→</span></button></div><div class="guest-prompt" id="guest-prompt"><span>☞</span><p>先从顾客那里听到一点什么，再回到这里也不迟。</p><button data-view="guests">去看看</button></div></aside>
+          <aside class="drink-preview"><div class="preview-kicker"><span id="preview-context">自由实验</span><span id="recipe-number">#001</span></div><div class="glass-stage"><div class="ambient-halo"></div><div class="drink-glass glass-low" id="drink-glass"><div class="liquid" id="liquid"><span class="liquid-shine"></span></div><div class="ice-cube ice-one"></div><div class="ice-cube ice-two"></div><div class="garnish-float" id="garnish-float">✦</div></div></div><div class="drink-summary"><div class="drink-tags" id="drink-tags"></div><h3 id="drink-title">还没有名字的夜晚</h3><p id="drink-description">从左边挑一些材料。每一次犹豫，都会留下不同的味道。</p><div class="flavor-bars" id="flavor-bars"></div></div><div class="recipe-name-wrap"><label for="recipe-name">给它一个名字</label><input id="recipe-name" maxlength="24" placeholder="例如：雨停之后" /></div><div class="preview-actions"><button class="secondary-button" id="save-recipe">♡ 保存配方</button><button class="primary-button" id="serve-drink">端上桌 <span>→</span></button></div><div class="guest-prompt" id="guest-prompt"><span>☞</span><p>先从顾客那里听到一点什么，再回到这里也不迟。</p><button data-view="guests">去看看</button></div></aside>
         </div>
       </section>
 

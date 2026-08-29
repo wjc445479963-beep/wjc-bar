@@ -1,11 +1,14 @@
 # 素材来源说明
 
-版本：`v1.3`
+版本：`v1.4`
 
 ## 本项目原创内容
 
 - `assets/tavern-hero-v1.png`：由 OpenAI ImageGen 为本项目生成的原创酒馆氛围插画，作为首页雨夜场景素材；生成提示要求无文字、无 Logo、无真实品牌包装、无水印。
 - `assets/tavern-hero-v2.png`：由 OpenAI ImageGen 重新生成的原创暖色酒馆室内插画，用于替换偏冷、偏阴森的首版主视觉；生成提示要求无文字、无 Logo、无真实品牌包装、无水印。
+- `assets/tavern-hero-v2.webp`：由上述原创主图生成的桌面端 WebP 优化版本，约 107KB。
+- `assets/tavern-hero-v2-tablet.webp`：面向 iPad/平板的 1024×768 WebP 裁切版本，约 67KB。
+- `assets/tavern-hero-v2-mobile.webp`：面向手机的 720×600 WebP 裁切版本，约 39KB。
 - 酒馆品牌名 `wjc bar`、角色名、酒馆日志、饮品名、饮品描述和故事文本：为本项目原创虚构内容。
 - 酒馆室内场景：使用 `styles.css` 中的 CSS 渐变、几何形状、阴影和动画绘制，不含真实店铺、真实酒瓶或真实 Logo。
 - 饮品杯型、液体颜色、冰块、装饰、材料图标：使用 HTML/CSS 与原创文字符号绘制。

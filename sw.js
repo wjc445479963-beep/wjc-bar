@@ -1,5 +1,5 @@
-const CACHE_NAME = 'wjc-bar-shell-v1.2';
-const SHELL = ['./', './index.html', './styles.css?v=1.2', './app.js?v=1.2', './assets/tavern-hero-v1.png'];
+const CACHE_NAME = 'wjc-bar-shell-v1.3';
+const SHELL = ['./', './index.html', './styles.css?v=1.3', './app.js?v=1.2', './assets/tavern-hero-v2.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()));
